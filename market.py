@@ -1,8 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')  # root url of website
-def hello_world():
-    return '<h1>Hello World! Big words</h1>'
+def home_page():
+    return render_template('home.html')
+
+
